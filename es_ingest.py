@@ -72,7 +72,7 @@ load_dotenv()
   
 # Initialize Elasticsearch client with credentials from environment variables  
 es = Elasticsearch(    
-    cloud_id=os.getenv('CLOUD_URL'),    
+    os.getenv('CLOUD_URL'),    
     basic_auth=(os.getenv('ELASTIC_USER'), os.getenv('ELASTIC_PASSWORD'))    
 )     
   
